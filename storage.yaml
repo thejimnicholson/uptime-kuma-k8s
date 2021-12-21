@@ -11,7 +11,7 @@ spec:
   # GKE: standard
   # EKS: gp2 (custom)
   # Rook: rook-ceph-block,rook-ceph-fs
-  # storageClassName: longhorn
+  storageClassName: longhorn
   accessModes:
   - ReadWriteOnce
   resources:
