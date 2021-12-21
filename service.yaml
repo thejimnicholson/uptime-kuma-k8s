@@ -1,0 +1,16 @@
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: uptime-kuma
+  namespace: uptime-kuma
+spec:
+  selector:
+    app: uptime-kuma
+  type: ClusterIP
+  ports:
+  - name: uptime-kuma-web
+    protocol: TCP
+    port: 80
+    targetPort: 3001
+---
