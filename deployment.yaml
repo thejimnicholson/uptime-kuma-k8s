@@ -37,18 +37,19 @@ spec:
             cpu: 100m
             memory: 100Mi
         livenessProbe:
-          tcpSocket:
-            port: 3001
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
+          exec:
+            command:
+              - node
+              - extra/healthcheck.js
+          initialDelaySeconds: 180
+          timeoutSeconds: 30
           successThreshold: 1
-          failureThreshold: 3
-          periodSeconds: 10
+          periodSeconds: 60
         readinessProbe:
           httpGet:
             path: /
             port: 3001
-          initialDelaySeconds: 5
+          initialDelaySeconds: 180
           timeoutSeconds: 2
           successThreshold: 1
           failureThreshold: 3
