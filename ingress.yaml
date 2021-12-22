@@ -20,4 +20,8 @@ spec:
             name: uptime-kuma-web
             port:
               number: 80
+  tls:
+  - hosts:
+    - uptime.thejimnicholson.com
+    secretName: uptime.thejimnicholson.com              
 ---
