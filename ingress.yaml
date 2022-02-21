@@ -7,7 +7,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "traefik"
     traefik.ingress.kubernetes.io/redirect-entry-point: https
-    cert-manager.io/cluster-issuer: http-clusterissuer  
+    cert-manager.io/cluster-issuer: dns-clusterissuer  
 spec:
   rules:
   - host: uptime.thejimnicholson.com
